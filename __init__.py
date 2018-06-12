@@ -15,5 +15,9 @@ def page1():
 def nav():
 	return render_template("nav.html")
 
+@app.route('/nav1')
+def nav1():
+	return render_template("nav1.html")
+
 if __name__ == "__main__":
 	app.run(debug=True)
