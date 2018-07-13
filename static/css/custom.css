@@ -1,16 +1,13 @@
 .wrapper {
     display: flex;
     align-items: stretch;
+    flex-direction: row;
 }
 
 #sidebar {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-}
-
-#sidebar.active {
-    margin-left: -250px;
 }
 
 a[data-toggle="collapse"] {
@@ -32,10 +29,9 @@ a[aria-expanded="true"]::before {
 
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 0vh;
     }
 }
 
@@ -65,7 +61,6 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
